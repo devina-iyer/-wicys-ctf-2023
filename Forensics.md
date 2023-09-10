@@ -9,7 +9,15 @@
 5. This fifth one was fairly straightforward. The zip file contained a myterious file with no extention. Running xxd on it yielded the flag!
 
 ## Hard
-Only one hard challenge, but it is VERY hard. I haven't cracked it yet. It is a gif file (the crash override one to be precise) and the hints are very unhelpful. 
+1. Only one hard challenge, but it is VERY hard. I haven't cracked it yet. It is a gif file (the crash override one to be precise) and the hints are very unhelpful:
+```
+Hint 1
+Close inspection of the gif is key, sometimes we make it harder so you have to do more
+
+Hint 2
+XOR hides things
+```
+Uploading it to Aperisolve indicated that there is a PGP Secret Key, but I haven't figured out how to extract it yet.
 
 ## Extra Hard
 1. This really was extra hard! The file was a pcapng, so I used wireshark. Looking through the different packets I noticed that some with UDP protocol were fairly large and contained lots of zeros. I followed the UDP stream and saved that file as RAW. Then comes the really hard part- figuring out a python script to look through the packets I extracted and pull the files from it. 
