@@ -6,7 +6,7 @@
    Trying to recreate it is quite hard, I'm almost certain I used both John an Hashcat to do this the first time, and I've forgotten the exact syntax for the hashcat now. At least it worked once and I got the flag!
 3. This one was more challenging that it should have been, really. The clue was right there - it is the name of the VB function that tests for internet connectivity. I think it might have been encrypted? Or just a lot of unzipping to do or hunting around for directories and I finally found one with VB in it, and running strings on it I think is what led me to the exact phrase- something along the lines of IsConnectionAvailable or something.
 4. This one was a breeze. The zip folder contained a pdf with blacked out lines. Doing a search for "flag" showed that the flag was blacked out, but I copy pasted it into notepad and there was the flag!
-5. This fifth one was fairly straightforward. The zip file contained a myterious file with no extention. Running xxd on it yielded the flag!
+5. This fifth one was fairly straightforward. The zip file contained a myterious file with no extension. Running xxd on it yielded the flag!
 
 ## Hard
 1. Only one hard challenge, but it is VERY hard. I haven't cracked it yet. It is a gif file (the crash override one to be precise) and the hints are very unhelpful:
