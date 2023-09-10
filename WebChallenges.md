@@ -18,6 +18,7 @@ There were quite a few web challenges:
 1. This challenge took me to a webpage asking just for a password. The webpage showed the password salt and hash, and that the password was encrypted with md5. Since a hash can't be reversed, I had to somehow use the given hash function to get A password (not necessarily THE password), since all the password had to do was provide a hash value of the same length and the same beginning, which was 0e. A python script seemed like the solution:
    Now, I'm new to python, so I had to check and see if python had a hasing library I could use, and sure enough they did.
 
+```python
 import hashlib
 
 salt = "enteryoursalthere"
@@ -33,5 +34,6 @@ while 1:
         print(password, str(i), new_hash)
         exit(0)
     i += 1
+```
 
 2. I haven't solved this challenge yet. The webpage doesn't have a login, simply three buttons that reveal different text when you click on them. The text sources are .txt files. The source code has a line that's hashed out that says the flag is in 12345678910111213141516.txt. Running the web server through I proxy, I tried to change the file name that would display as output upon clicking the button to the text file with the flag, but the error message tells me to behave as the file name is too long?
