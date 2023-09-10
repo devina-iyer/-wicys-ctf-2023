@@ -94,12 +94,12 @@ whilenotEOF:
          # Let's just count the amount of data we have read so far
          read_byte_count += 2048
 
-         # Read 8 Bytes# Contains the response from client to server,
-acknowledging the actual chunk number received (took from header)
+         # Read 8 Bytes# Contains the response from client to server, acknowledging the actual chunk number received (took from header)
          client_chunk_echo = f.read(8)
 
          # Check if the actual chunk number is the same that theserver sent to client in the beginning of conversation. If it's the same chunk number assume wereached the last chunk, or End of This File.
-         if client_echo_file_size == client_chunk_echo:                                      file_count += 1
+         if client_echo_file_size == client_chunk_echo:
+                  file_count += 1
                   break
    # After read while file from stream, let's close it so we can start a new file export.
    out_file.close()
