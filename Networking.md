@@ -7,7 +7,15 @@
 
 ## Medium
 1. This one was a little strange. The instructions wanted me to connect to a network server that would require a password. The instructions also said that the password poslicy required at least one capital letter and four digits, and that the policy is also to force a password change every year. That pointed to the four digit number possibly being the year, and the password therefore likely being Password2023. Well, it didn't work. So I tried Password2022. That didn't work either, so as a last ditch attempt I tried Password2021, and it worked! I guess they haven't updated this challenge in a couple of years?
-2. I used the same technique as the first easy challenge to find the flag for this one too! 
+2. I used the same technique as the first easy challenge to find the flag for this one too!
+3. This challenge took longer than it needed to as well. Again, the output from the server was slightly different each time, and very long, made up of numbers separated by dashes. I saved the output to a file, ran a python script to replace the dashes with spaces:
+
+``` python
+str='32-12-98-32-....'
+print(str.replace('-',' '))
+```
+
+I recognized that the numbers had to be octal because there were no 9s, so I plugged it into Cyberchef. The flag was not obvious at all at first, but looking closely I saw that the word Flag was written as galF, and so I was able to copy it, straighten it out and plug it in!
 
 ## Hard
 1. Challenge wanted us to connect to a network server. The response from the server was "Welcome to the server. Patched with size limits. Please provide your numeric user ID:" so of course I realised I had to do the exact opposite and entered a very long string of As. That yielded the flag! Easy for a hard challenge!
