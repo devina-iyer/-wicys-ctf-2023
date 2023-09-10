@@ -8,7 +8,6 @@
 ## Medium
 1. This one was a little strange. The instructions wanted me to connect to a network server that would require a password. The instructions also said that the password poslicy required at least one capital letter and four digits, and that the policy is also to force a password change every year. That pointed to the four digit number possibly being the year, and the password therefore likely being Password2023. Well, it didn't work. So I tried Password2022. That didn't work either, so as a last ditch attempt I tried Password2021, and it worked! I guess they haven't updated this challenge in a couple of years?
 2. I used the same technique as the first easy challenge to find the flag for this one too! 
-3.
 
 ## Hard
 1. Challenge wanted us to connect to a network server. The response from the server was "Welcome to the server. Patched with size limits. Please provide your numeric user ID:" so of course I realised I had to do the exact opposite and entered a very long string of As. That yielded the flag! Easy for a hard challenge!
@@ -35,5 +34,3 @@ while True:
       break
 ```
 Now, an important thing to note is that I had to run this in python2, with py -2 script.py. The reason being that python3 did not like that I was trying to submit a string value to the server and insisted on it being bytes.
-  
-4. 
