@@ -20,7 +20,7 @@ XOR hides things
 Uploading it to Aperisolve indicated that there is a PGP Secret Key, but I haven't figured out how to extract it yet.
 
 ## Extra Hard
-1. This really was extra hard! The file was a pcapng, so I used wireshark. Looking through the different packets I started following the streams. When I followed a UDP stream the first hing I saw was a .jpg, so I extracted the stream. I was lucky enough to pull together a python code with tons of googling to extract the files from it. 
+1. This really was extra hard! The file was a pcapng, so I used wireshark. Looking through the different packets I started following the streams. When I followed a UDP stream the first hing I saw was "get 1.jpg", so I extracted the stream. I was lucky enough to pull together a python code with tons of googling to extract the files from it. 
 
 ```python
 EOF = False
