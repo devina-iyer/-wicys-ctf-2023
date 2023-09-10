@@ -14,6 +14,7 @@ Only one hard challenge, but it is VERY hard. I haven't cracked it yet. It is a 
 ## Extra Hard
 1. This really was extra hard! The file was a pcapng, so I used wireshark. Looking through the different packets I noticed that some with UDP protocol were fairly large and contained lots of zeros. I followed the UDP stream and saved that file as RAW. Then comes the really hard part- figuring out a python script to look through the packets I extracted and pull the files from it. 
 
+```python
 EOF = False
 file_count = 0
 f = open("res01.txt","rb")
@@ -38,5 +39,6 @@ while not EOF:
             break
     out_file.close()
 f.close    
+```
 
 Running this script dumped out a few files, one of which was a zip folder that had an image with the flag on it.
